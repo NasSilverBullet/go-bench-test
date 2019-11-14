@@ -17,7 +17,7 @@ func main() {
 }
 
 func run() error {
-	b := &bmap.M{}
+	b := &bmap.BMap{}
 	hm := b.GenHugeMap()
 	_ = hm
 
