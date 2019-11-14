@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/NasSilverBullet/go-bench-test/bmap"
+	"github.com/NasSilverBullet/go-bench-test/bfor"
 )
 
 func main() {
@@ -17,9 +17,11 @@ func main() {
 }
 
 func run() error {
-	b := &bmap.BMap{}
-	hm := b.GenHugeMap()
-	_ = hm
+	bf := &bfor.BFor{}
+	s := bf.Gen()
+
+	bf.LoopWithCopy(s)
+	bf.LoopMapAccess(s)
 
 	return nil
 }
